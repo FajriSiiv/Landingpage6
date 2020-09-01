@@ -1,0 +1,326 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Poppins', sans-serif;/* 
+  background-image: url(gunung1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px; */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav{
+    z-index: 1;
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #3e0748;
+    transition: .5s;
+    overflow: hidden;
+    top: 0;
+}
+.nav:hover,
+.nav.active{
+    width: 300px;
+}
+
+.nav:hover{
+    width: 300px;
+}
+.nav ul{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+}
+.nav ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.nav ul li:hover{
+    background: rgb(219, 55, 55);
+}
+.nav ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.nav ul li a:hover{
+    color: rgb(0, 0, 0);
+}
+.nav ul li a .icon{
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.nav ul li a .icon .fa{
+    font-size: 18px;
+}
+.nav ul li a .tittle{
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #330748;
+    cursor: pointer;
+}
+.toggle.active{
+    background: rgb(204, 59, 59);
+    z-index: 2;
+}
+.toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+.toggle.active:before{
+    position: absolute;
+    content: '\f00d';
+    z-index: 2;
+}
+.jumbotron img{
+    width: 200%;
+    margin: auto;
+}
+.jumbotron .tulis{
+    margin: auto;
+    width: 100%;
+}
+.jumbotron .row{
+    width: 100%;
+    grid-gap: 100px;
+}
+.jumbotron .row div{
+    padding: 0 50px;
+}
+.info{
+    margin-left: 230px;
+}
+.info .container div h2{
+    margin: 30px  0;
+}
+.info .container div{
+    text-align: center;
+}
+.info .container h2:after{
+    content: '';
+    display: block;
+    border-bottom: 2px solid black;
+    width: 20%;
+    margin: auto;
+    margin-top: 10px;
+}
+.card{
+    border: none;
+    margin: 60px;
+}
+.card .feature{
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+    margin-left: 80px;
+}/* 
+.card .feature::before{
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid black;
+    width: 50px;
+} */
+.card .row{
+    grid-gap: 70px;
+    box-sizing: border-box;
+}
+.card .row div{
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
+    transition: .3s;
+    cursor: pointer;
+}
+.card .row div:hover{
+    background-color: rgb(73, 11, 109);
+    transform: scale(1.06);
+    color: white;
+}
+.card .row div h2{
+    font-weight: bold;
+    margin: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+.card .row p{
+    font-size: 14px;
+    text-align: center;
+}
+.card .row i{
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+}
+.footer .logo{
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.footer .container{
+    display: flex;
+}.footer .container a{
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.815);
+    transition: .2s ;
+}
+.footer .container a:hover{
+    color: rgb(97, 97, 212);
+}
+.copy{
+    text-align: center;
+    background: rgb(224, 103, 103);
+    margin: 0;
+    margin-top: 20px;
+    font-weight: 600;
+}
+/* Responsive */
+/* Laptop */
+@media (min-width:768px){
+    .card .row{
+        margin-left: 180px;
+    }
+    .footer .container{
+        margin-left: 190px;
+    }
+}
+
+/* tablet */
+@media (max-width:769px){
+    .nav{
+        left: -60px;
+    }
+    .nav.active{
+        left: 0;
+        width: 100%;
+    }
+    .jumbotron img{
+        width: 120%;
+        margin-bottom: 30px;
+    }
+    .jumbotron .row{
+        grid-gap: 20px;
+    }
+    .jumbotron .row .tulis{
+        margin: 0 40px;
+    }
+    .info{
+        margin: 0;
+    }
+    .card .row{
+        width: 70%;
+        grid-gap: 30px;
+        margin: auto;
+    }
+    .card .row div{
+        width: 100%;
+    }
+    .card .feature{
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    .footer .container{
+        margin: auto;
+        text-align: center;
+    }
+}
+/* Hp */
+@media(max-width:576px){
+    .toggle{
+        z-index: 10;
+    }
+    .jumbotron{
+        width: 105%;
+    }
+    .jumbotron .row{
+        grid-gap: 0;
+        margin-right: 0;
+    }
+    .jumbotron img{
+        width: 90%;
+        margin: auto;
+    }
+    .jumbotron .container .row div{
+        padding: 20px;
+        margin: 30px 0;
+    }
+    .jumbotron .row h2{
+        font-size: 30px;
+    }
+    .jumbotron .row .tulis{
+        padding: 0;
+        margin: 0;
+    }
+    .jumbotron .row p{
+        font-size: 14px;
+    }
+    .info .container{
+        margin-bottom: 35px;
+    }
+    .info .container h2:after{
+    width: 50%;
+    }
+    .card{
+        position: relative;
+        width: 105%;
+        margin: auto;
+    }
+    .card .row{
+        margin: auto;
+        grid-gap: 20px;
+        width: 80%;
+    }
+    .card .row div i{
+        font-size: 40px;
+    }
+    .card .row div h2{
+        font-size: 20px;
+    }
+    .card .row div p{
+        font-size: 12px;
+    }
+    .footer .container{
+        display: inline;
+    }
+    .footer .logo{
+        padding-left: 15px;
+    }
+    .footer .container div{
+        margin: 10px;
+        top: -20px;
+    }
+}
