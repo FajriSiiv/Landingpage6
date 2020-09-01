@@ -304,6 +304,9 @@ body {
         grid-gap: 20px;
         width: 80%;
     }
+    .card .row div{
+        margin-bottom: 30px;
+    }
     .card .row div i{
         font-size: 40px;
     }
